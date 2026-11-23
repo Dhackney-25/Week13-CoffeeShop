@@ -12,6 +12,36 @@ package coffeeshop;
 
 public class MenuItem {
 
-    // YOUR CODE
+    private String name;
+    private double price;
 
+    // Creates a menu item with a name and price.
+    public MenuItem(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    public MenuItem() {
+
+    }
+
+    // Returns the name of the menu item.
+    public String getName() {
+        return name;
+    }
+
+    // Returns the price of the menu item.
+    public double getPrice() {
+        return price;
+    }
+
+    // Returns false because a regular menu item is not a drink.
+    public boolean isDrink() {
+        return false;
+    }
+
+    // Returns the menu item name and price.
+    public String toString() {
+        return getName() + " - $" + String.format("%.2f", getPrice());
+    }
 }
